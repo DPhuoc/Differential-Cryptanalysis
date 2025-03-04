@@ -211,7 +211,7 @@ def des(input_block, key, crypt_type):
     initial_permutation = permute(input_block, INITIAL_PERMUTATION_TABLE)
     # initial_permutation = input_block
 
-    rounds = range(4) if crypt_type == 'e' else reversed(range(16))
+    rounds = range(6) if crypt_type == 'e' else reversed(range(16))
     output = initial_permutation
 
     for i, j in enumerate(rounds, 1):
